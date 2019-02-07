@@ -1,5 +1,12 @@
+\section{Mengenal .tex}
+Pertama pahami dulu bagaimana badan isi file .tex yang akan kita kerjakan. Download atau lihat salah satu file latex yang akan kita kerjakan. Untuk mengisi latex kita harus mengisinya di dalam komponen \textit{document} yang merupakan tag dengan pembuka begin dan diakhiri dengan end.
+Kemudian kenali bagian buku terdiri dari part, chapter dan section. Part itu bisa kita andaikan bab, chapter sub bab, dan section adalah bagian.
+
+Kita bisa memisahkan isi dari latex dengan perintah input kemudian di dalam kurung kurawal letak file .tex yang akan kita masukkan kedalam file utama latex tersebut.
+
 \section{Compiler}
-Menggunakan perintah
+Pastikan kita sudah install aplikasi editor latex. Disini saya praktekkan menggunakan texmaker. Kita bisa melakukan kompilasi dengan perintah yang ada di listing \ref{lst:compile}.
+
 \begin{lstlisting}[caption=Perintah kompilasi latex keluaran pdf,label={lst:compile},language=sh]
 pdflatex -shell-escape -interaction=nonstopmode -file-line-error git.tex | grep ".*:[0-9]*:.*|LaTeX Warning:"
 
