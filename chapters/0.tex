@@ -4,6 +4,8 @@ Kemudian kenali bagian buku terdiri dari part, chapter dan section. Part itu bis
 
 Kita bisa memisahkan isi dari latex dengan perintah input kemudian di dalam kurung kurawal letak file .tex yang akan kita masukkan kedalam file utama latex tersebut.
 
+LATEX merupakan program pengolahan kata atau sistem persiapan pembuatan dokumen untuk pengetikan sistem TeX, yang dinamakan berdasarkan gaya penulisannya sebagai LaTeX. Nama LaTeX itu sendiri hanya mengacu pada bahasa penulisan yang digunakan pada sebuah dokumen, bukan pada editor yang digunakan untuk menulis dokumen tersebut. Untuk membuat dokumen dalam format LaTeX, sebuah file berformat .tex harus dibuat menggunakan semacam text editor. Walaupun, banyak text editor yang dapat digunakan untuk membuat dokumen LaTeX, beberapa text editor sengaja dibuat khusus untuk menggunakan bahasa LaTex.
+
 \section{Compiler}
 Pastikan kita sudah install aplikasi editor latex. Disini saya praktekkan menggunakan texmaker. Kita bisa melakukan kompilasi dengan perintah yang ada di listing \ref{lst:compile}.
 
@@ -13,4 +15,4 @@ pdflatex -shell-escape -interaction=nonstopmode -file-line-error git.tex | grep 
 pdflatex -shell-escape -interaction=nonstopmode -file-line-error git.tex | grep ".*:[0-9]*:.*"
 
 pdflatex -shell-escape -interaction=nonstopmode -file-line-error git.tex | grep -i ".*:[0-9]*:.*\|warning"
-\end{lstlisting}
+\end{lstlisting} 
