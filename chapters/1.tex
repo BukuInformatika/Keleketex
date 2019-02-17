@@ -1,12 +1,21 @@
 \section{Pembagian bab}
-Pembagian bab di latex menggunakan perintah \textit{section}, \textit{subsection}, \textit{subsubsection} dan \textit{subsubsubsection}.
+Secara default pembagian bab pada latex menggunakan perintah \textit{section}, \textit{subsection}, \textit{subsubsection} dan \textit{subsubsubsection}. Untuk mengatur kedalaman suatu dokumen pada bab bab tertentu, kita dapat menggunakan perintah berikut ini pada bagian Preamble :
+
+
+
+setcounter.secnumdepth
+
+
+setcounter.tocdepth
+
+Opsi yang digunakan pada syntax secnumdepth pada perintah verbcounter= seperti perintah diatas, berarti Anda telah merubah kedalaman bab yang Anda perbaharui sampai dengan level 5 yaitu section -- subsection -- subsubsection -- paragraph -- subparagraph. Sedangkan pada perintah dari opsi tocdepth berfungsi untuk membuat table of contents atau menampilkan kedalaman bab sampai dengan level 5, namun jika tidak di setel maka pada bagian level 3 kebawah tidak akan dapat ditampilkan pada bagian toc.
 
 
 \section{Format Cetak}
-Hal paling mendasar antara lain cetak tebal, miring dan gari bawah. Cetak tebal menggunakan perintah \textit{textbf},cetak miring menggunakan perintah \textit{textit} dan garis bawah menggunakan perintah \textit{underline}.
+Pada format LateX teks mempunyai bentuk plaintext, yang artinya teks tersebut belum diformat. Pada proses formatting teks dapat dilakukan dengan bahasa tersendiri yaitu bahasa markup. Hal paling mendasar antara lain cetak tebal, miring dan gari bawah. Cetak tebal menggunakan perintah \textit{textbf},cetak miring menggunakan perintah \textit{textit} dan garis bawah menggunakan perintah \textit{underline}.
 
 \section{Tanda petik}
-Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasanya berada pada sebelah angka satu di keyboard dan diakhiri petik satu.
+Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasanya berada pada sebelah angka satu di keyboard dan diakhiri petik satu. Ingat fungsi tanda petik hanya untuk melakukan quote atau pengutipan langsung. Untuk istilah bahasa inggris gunakan miring.
 
 \begin{lstlisting}[caption=Contoh kalimat dalam tanda petik di Latex,label={lst:tandapetik}]
 `kalimat dalam tanda petik'
@@ -16,68 +25,46 @@ Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasa
 Penomoran di latex menggunakan perintah \textit{enumerate} sedangkan untuk poin menggunakan \textit{itemize}.
 
 \section{Karakter Khusus}
-
-Sebuah dokumen LATEX memiliki struktur yang dicirikan dengan blok yang diapit oleh pasangan perintah \begin dan \end. Untuk menyatakan jenis dokumen yang akan diolah, setiap dokumen harus dimulai dengan perintah \documentclass{…}
-Jenis dokumen yang akan diolah ditentukan oleh perintah pertama dalam bentuk \documentclass[option]{class}
-
-
-Dalam perintah diatas,“class”dapat diganti oleh article, report, book,atau slides untuk menuliskan artikel,laporan,buku,atau transparansi untuk seminar. Sedangkan pada bagian“option” dapat dituliskan satu atau beberapa pilihan berikut:10pt, 11pt, 12pt untuk menyatakan ukuran font utama yang digunakan didalam dokumen paper, letter paper menyatakan ukuran kertas yang digunakan titlepage. No titlepage untuk menyatakan apakah halaman judul akan dibuat terpisah dari badan dokumen atau tidak twocolumn untuk menampilkan dokumen dalam bentuk dua kolom twoside. Oneside untuk menyatakan apakah dokumen akan dicetak pada satu sisi atau dua sisi dari kertas.
+Untuk memberikan karakter khusus pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya.
+\par Format yang digunakan adalah tanda kutip 1 yang miring(`) sebagai tanda kutip pembuka dan tanda kutip 1 (') sebagai tanda penutup, jika format itu digunakan contohnya seperti ini : `quotes'.
 
 
 \section{Kode Program}
-Kode program menggunakan \textit{lstlisting}. Jangan lupa parameter \textit{caption} dan \textit{label} senantiasa ditulis.
+Agar kita dapat memasukan kode program, kita dapat menggunakan perintah \textit{lstlisting}. Perintah ini  berfungsi untuk memasukkan atau menambahkan kode program apapun ke dalam file yang terpisah. Untuk memasukan perintah \textit{lstlisting} kita perlu menulis parameter \textit{caption} dan \textit{label} untuk memberikan penjelasan keterangan kode program dan sebagai sumber referensi dari label kode program.
+
 \lstinputlisting[caption=Menambahkan kode program,label={lst:kodeprogram}]{src/1/lstlisting.tex}
 
-\section {PErintah LAtex}
-a. Spasi dalam Latex
-Ada perintah khusus untuk membuat spasi dengan panjang tertentu baik secara horizontal maupun vertikal, yaitu :
+\section{Menambahkan Gambar}
+Cara menambahkan gambar seperti pada listing \ref{lst:kodegambar}.
+\lstinputlisting[caption=Contoh kode untuk menambahkan gambar,label={lst:kodegambar}]{src/1/figure.tex}
 
-Jika ingin membuat jarak dengan panjang tertentu antara 2 baris, dapat menggunakan tanda garis miring di akhir baris. Dan juga dapat menentukan sendiri panjang baris kosong dengan menggunakan perintah seperti contoh berikut ini :
 
-baris 1
+\section{Tabel}
 
-\vspace{2cm}
 
-baris 2
-Dengan perintah ini, Latex akan mengosongkan baris-baris sepanjang 2 cm. Tanpa menggunakan perintah ini untuk membuat spasi dalam teks dokumen, Latex akan tetap menganggapnya 1 spasi.
 
-Jika ingin membuat spasi sejauh beberapa centimeter antara 2 kata dibutuhkan perintah sebagai berikut :
-kata 1 \hspace{2cm} kata 2
-Dengan perintah ini, Latex akan membuat spasi sejauh 2 centimeter.
+Document class
 
-Jadi, secara umum aturan yang dapat dipakai adalah akhiri paragraf dengan tanda garis miring dan berikan 1 baris kosong antara tiap-tiap paragraf dan 1 spasi kosong antara masing-masing kata.
+Latex memberikan pilihan Class dokeman yang bisa di pakai, antara lain adlah Book, Report, Article dan lain sebagainy. Class docoment book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung tabble of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
 
-Ada beberapa macam ukuran font dalam format Latex, untuk menggunakan ukuran yang ada dalam format Latex itu ada beberapa caranya yaitu sebagai berikut:
 
-Tiny
-{\tiny teks yang ingin diformat }
+penulisan judul
 
-Scriptsize
-{\scriptsize teks yang ingin diformat }
+dalam penulisan judul dalam format latex di letakkan pada awal document, untuk cara penulisan nya sebagai berikut:
 
-Footnotesize
-{\footnotesize teks yang ingin diformat }
+garis miring document class kurung kurawal a4papper, ukuran yang di inginkan tutup kurawal lalu report
 
-Small
-{\small teks yang ingin diformat }
+garis miring begin buka kurawal document tutup kurawal
 
-Normal
-{\normalsize teks yang ingin diformat }
+garis miring begin buka kurawal judul document tutup kurawal
 
-Large
-{\large teks yang ingin diformat }
+garis miring autor buka kurawal nama penulis tutup kurawal
 
-Larger
-{\Large teks yang ingin diformat }
+garis miring date buka kurawal tanggal pembuatan tutup kurawal
 
-Largest
-{\LARGE teks yang ingin diformat }
+garis miring maketitle
 
-Huge
-{\huge teks yang ingin diformat }
-
-Huger
-{\Huge teks yang ingin diformat }
+garis miring and buka kurawal document tutup kurawal
 
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini,
