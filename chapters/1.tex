@@ -8,7 +8,7 @@ setcounter.secnumdepth
 
 setcounter.tocdepth
 
-Opsi yang digunakan pada syntax secnumdepth pada perintah verbcounter= seperti perintah diatas, berarti Anda telah merubah kedalaman bab yang Anda perbaharui sampai dengan level 5 yaitu section -- subsection -- subsubsection -- paragraph -- subparagraph. Sedangkan pada perintah dari opsi tocdepth berfungsi untuk membuat table of contents atau menampilkan kedalaman bab sampai dengan level 5, namun jika tidak di setel maka pada bagian level 3 kebawah tidak akan dapat ditampilkan pada bagian toc. 
+Opsi yang digunakan pada syntax secnumdepth pada perintah verbcounter= seperti perintah diatas, berarti Anda telah merubah kedalaman bab yang Anda perbaharui sampai dengan level 5 yaitu section -- subsection -- subsubsection -- paragraph -- subparagraph. Sedangkan pada perintah dari opsi tocdepth berfungsi untuk membuat table of contents atau menampilkan kedalaman bab sampai dengan level 5, namun jika tidak di setel maka pada bagian level 3 kebawah tidak akan dapat ditampilkan pada bagian toc.
 
 
 \section{Format Cetak}
@@ -25,7 +25,7 @@ Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasa
 Penomoran di latex menggunakan perintah \textit{enumerate} sedangkan untuk poin menggunakan \textit{itemize}.
 
 \section{Karakter Khusus}
-Untuk memberikan karakter khusus pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya. 
+Untuk memberikan karakter khusus pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya.
 \par Format yang digunakan adalah tanda kutip 1 yang miring(`) sebagai tanda kutip pembuka dan tanda kutip 1 (') sebagai tanda penutup, jika format itu digunakan contohnya seperti ini : `quotes'.
 
 
@@ -39,4 +39,28 @@ Cara menambahkan gambar seperti pada listing \ref{lst:kodegambar}.
 \lstinputlisting[caption=Contoh kode untuk menambahkan gambar,label={lst:kodegambar}]{src/1/figure.tex}
 
 \section{Tabel}
+
+
+Document class
+
+Latex memberikan pilihan klas dokeman yang bisa di pakai, antara lain adlah Book, Report, Article dan lain sebagainy. Class docoment book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung tabble of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
+
+
+penulisan judul
+
+dalam penulisan judul dalam format latex di letakkan pada awal document, untuk cara penulisan nya sebagai berikut:
+
+garis miring document class kurung kurawal a4papper, ukuran yang di inginkan tutup kurawal lalu report
+
+garis miring begin buka kurawal document tutup kurawal
+
+garis miring begin buka kurawal judul document tutup kurawal
+
+garis miring autor buka kurawal nama penulis tutup kurawal
+
+garis miring date buka kurawal tanggal pembuatan tutup kurawal
+
+garis miring maketitle
+
+garis miring and buka kurawal document tutup kurawal
 
