@@ -1,9 +1,18 @@
 \section{Pembagian bab}
-Pembagian bab di latex menggunakan perintah \textit{section}, \textit{subsection}, \textit{subsubsection} dan \textit{subsubsubsection}.
+Secara default pembagian bab pada latex menggunakan perintah \textit{section}, \textit{subsection}, \textit{subsubsection} dan \textit{subsubsubsection}. Untuk mengatur kedalaman suatu dokumen pada bab bab tertentu, kita dapat menggunakan perintah berikut ini pada bagian Preamble :
+
+
+
+setcounter.secnumdepth
+
+
+setcounter.tocdepth
+
+Opsi yang digunakan pada syntax secnumdepth pada perintah verbcounter= seperti perintah diatas, berarti Anda telah merubah kedalaman bab yang Anda perbaharui sampai dengan level 5 yaitu section -- subsection -- subsubsection -- paragraph -- subparagraph. Sedangkan pada perintah dari opsi tocdepth berfungsi untuk membuat table of contents atau menampilkan kedalaman bab sampai dengan level 5, namun jika tidak di setel maka pada bagian level 3 kebawah tidak akan dapat ditampilkan pada bagian toc.
 
 
 \section{Format Cetak}
-Hal paling mendasar antara lain cetak tebal, miring dan gari bawah. Cetak tebal menggunakan perintah \textit{textbf},cetak miring menggunakan perintah \textit{textit} dan garis bawah menggunakan perintah \textit{underline}.
+Pada format LateX teks mempunyai bentuk plaintext, yang artinya teks tersebut belum diformat. Pada proses formatting teks dapat dilakukan dengan bahasa tersendiri yaitu bahasa markup. Hal paling mendasar antara lain cetak tebal, miring dan gari bawah. Cetak tebal menggunakan perintah \textit{textbf},cetak miring menggunakan perintah \textit{textit} dan garis bawah menggunakan perintah \textit{underline}.
 
 \section{Tanda petik}
 Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasanya berada pada sebelah angka satu di keyboard dan diakhiri petik satu. Ingat fungsi tanda petik hanya untuk melakukan quote atau pengutipan langsung. Untuk istilah bahasa inggris gunakan miring.
@@ -16,16 +25,25 @@ Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasa
 Penomoran di latex menggunakan perintah \textit{enumerate} sedangkan untuk poin menggunakan \textit{itemize}.
 
 \section{Karakter Khusus}
-Beberapa karakter yang tidak bisa langsung digunakan seperti tanda ampersand
+Untuk memberikan karakter khusus pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya.
+\par Format yang digunakan adalah tanda kutip 1 yang miring(`) sebagai tanda kutip pembuka dan tanda kutip 1 (') sebagai tanda penutup, jika format itu digunakan contohnya seperti ini : `quotes'.
 
 
 \section{Kode Program}
-Kode program menggunakan \textit{lstlisting}. Jangan lupa parameter \textit{caption} dan \textit{label} senantiasa ditulis.
+Agar kita dapat memasukan kode program, kita dapat menggunakan perintah \textit{lstlisting}. Perintah ini  berfungsi untuk memasukkan atau menambahkan kode program apapun ke dalam file yang terpisah. Untuk memasukan perintah \textit{lstlisting} kita perlu menulis parameter \textit{caption} dan \textit{label} untuk memberikan penjelasan keterangan kode program dan sebagai sumber referensi dari label kode program.
+
 \lstinputlisting[caption=Menambahkan kode program,label={lst:kodeprogram}]{src/1/lstlisting.tex}
 
-\section{Rumus}
+\section{Menambahkan Gambar}
+Cara menambahkan gambar seperti pada listing \ref{lst:kodegambar}.
+\lstinputlisting[caption=Contoh kode untuk menambahkan gambar,label={lst:kodegambar}]{src/1/figure.tex}
 
 \section{Tabel}
+
+
+Document class
+
+Latex memberikan pilihan klas dokeman yang bisa di pakai, antara lain adlah Book, Report, Article dan lain sebagainy. Class docoment book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung tabble of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
 
 
 penulisan judul
@@ -38,10 +56,11 @@ garis miring begin buka kurawal document tutup kurawal
 
 garis miring begin buka kurawal judul document tutup kurawal
 
-garis miring autor buka kurawal nama penulis tutup kurawal 
+garis miring autor buka kurawal nama penulis tutup kurawal
 
 garis miring date buka kurawal tanggal pembuatan tutup kurawal
- 
+
 garis miring maketitle
 
-garis miring and buka kurawal document tutup kurawal 
+garis miring and buka kurawal document tutup kurawal
+
