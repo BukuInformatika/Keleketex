@@ -25,11 +25,12 @@ Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasa
 Penomoran di latex menggunakan perintah \textit{enumerate} sedangkan untuk poin menggunakan \textit{itemize}.
 
 \section{Karakter Khusus}
-Beberapa karakter yang tidak bisa langsung digunakan seperti tanda ampersand
+Untuk memberikan karakter khusus pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya. 
+\par Format yang digunakan adalah tanda kutip 1 yang miring(`) sebagai tanda kutip pembuka dan tanda kutip 1 (') sebagai tanda penutup, jika format itu digunakan contohnya seperti ini : `quotes'.
 
 
 \section{Kode Program}
-Kode program menggunakan \textit{lstlisting}. Jangan lupa parameter \textit{caption} dan \textit{label} senantiasa ditulis.
+Agar kita dapat memasukan kode program, kita dapat menggunakan perintah \textit{lstlisting}. Perintah ini  berfungsi untuk memasukkan atau menambahkan kode program apapun ke dalam file yang terpisah. Untuk memasukan perintah \textit{lstlisting} kita perlu menulis parameter \textit{caption} dan \textit{label} untuk memberikan penjelasan keterangan kode program dan sebagai sumber referensi dari label kode program.
 
 \lstinputlisting[caption=Menambahkan kode program,label={lst:kodeprogram}]{src/1/lstlisting.tex}
 
