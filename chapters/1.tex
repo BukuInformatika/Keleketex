@@ -26,7 +26,7 @@ Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasa
 \section{Penomoran}
 Perintah penomoran pada latex biasanya menggunakan format \textit{Numbering} atau format \textit{Bullets}. Perintah yang digunakan pada format Numbering adalah \textit{enumerate} sedangkan untuk Bullets yang menyerupai poin menggunakan \textit{itemize}.
 
-\textit{Numbering} merupakan perintah yang digunakan untuk membuat daftar berurut dengan penomoran menggunakan angka (numbered list), yang biasanya diberikan pada awal baris baru \ref{lst:PenomoranNumbering}. 
+\textit{Numbering} merupakan perintah yang digunakan untuk membuat daftar berurut dengan penomoran menggunakan angka (numbered list), yang biasanya diberikan pada awal baris baru \ref{lst:PenomoranNumbering}.
 \lstinputlisting[caption=Memberikan Perintah Numbering,label={lst:PenomoranNumbering}]{src/1/lstlistingNumbering.tex}
 Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list) \ref{lst:penomoran}.
 \lstinputlisting[caption=Menambahkan kode perintah bullets,label={lst:penomoran}]{src/1/poin.tex}
@@ -54,11 +54,26 @@ Cara menambahkan gambar seperti pada listing \ref{lst:kodegambar}.
 
 
 \section{Tabel}
-Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya. 
+
+Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya \ref{lst:tabel}
+
+\lstinputlisting[caption=Menambahkan perintah table,label={lst:tabel}]{src/1/tabel.tex}
+
+Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya.
+
 
 \section{Document class}
 
 Pada dokumen Latex terdapat atau mempunyai beberapa struktur yang dicirikan dengan blok yang diberi apit oleh perintah begin dan end. Latex memberikan pilihan Class dokuman yang bisa di pakai, antara lain aadlah Book, Report, Article dan lain sebagainya. Class document book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung table of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
+
+
+Format ukuran font pada latex \ref{labelgambar1}
+
+\begin{figure}[ht]
+\centerline{\includegraphics[width=0.7\textwidth]{figures/1.PNG}}
+\caption{ukuran font}
+\label{labelgambar1}
+\end{figure}
 
 Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awal document, untuk cara penulisan nya dapat dilakukan sebagai berikut:
 \begin{enumerate}
@@ -73,7 +88,6 @@ Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awa
 
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini, Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang, dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis.
-
 
 
 
