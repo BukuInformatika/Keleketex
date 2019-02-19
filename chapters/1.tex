@@ -41,14 +41,15 @@ Cara menambahkan gambar seperti pada listing \ref{lst:kodegambar}.
 
 
 \section{Tabel}
-Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya.
+Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya \ref{lst:tabel}
+
 \lstinputlisting[caption=Menambahkan perintah table,label={lst:tabel}]{src/1/tabel.tex}
 
 \section{Document class}
 
 Pada dokumen Latex terdapat atau mempunyai beberapa struktur yang dicirikan dengan blok yang diberi apit oleh perintah begin dan end. Latex memberikan pilihan Class dokuman yang bisa di pakai, antara lain aadlah Book, Report, Article dan lain sebagainya. Class document book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung table of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
 
-Format ukuran font pada latex :
+Format ukuran font pada latex \ref{labelgambar1}
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=0.7\textwidth]{figures/1.PNG}}
@@ -62,5 +63,68 @@ Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang 
 Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang,
 dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis.
 
-
-
+\section{Membuat Penomoran Referensi}
+Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterangan referensi/sumber asal suatu kutipan/gagasan seperti pada gambar \ref{fig:contohpenomoranref}.
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/contohpenomoranref.png}
+  \caption{Ini adalah Contoh Penomoran Referensi}\label{fig:contohpenomoranref}
+\end{figure}
+\par Bagaimana cara membuatnya di Latex? berikut cara membuatnya:
+\begin{enumerate}
+  \item Cari materi yang akan dikutip melalui Google Scholar seperti pada gambar \ref{fig:scholar} ,
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/scholar.png}
+  \caption{Ini adalah Halaman Google Scholar}\label{fig:scholar}
+\end{figure}
+  \item Setelah selesai mengutip jangan lupa untuk mengambil script bibtexnya dengan cara klik pada tanda '' seperti pada gambar \ref{fig:awalbibtex},
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/awalbibtex.png}
+  \caption{Ini adalah Tanda proses awal mengambil reference}\label{fig:awalbibtex}
+\end{figure}
+  \item Maka akan muncul seperti gambar \ref{fig:kutip}, lalu pilih Bibtex.
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/kutip.png}
+  \caption{Ini adalah Pilihan mengutip}\label{fig:kutip}
+\end{figure}
+  \item Setelah memilih Bibtex maka akan muncul script seperti pada gambar \ref{fig:scriptbibtex},
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/scriptbibtex.png}
+  \caption{Ini adalah Script BibTex}\label{fig:scriptbibtex}
+\end{figure}
+  \item Script tersebut dicopy pada direktori yang dikerjakan, khususnya pada bagian reference.bib seperti pada gambar \ref{fig:direktori} dan \ref{fig:reference} pada editor,
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/direktori.png}
+  \caption{Ini adalah Direktori pekerjaan}\label{fig:direktori}
+\end{figure}
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/reference.png}
+  \caption{Ini adalah Reference.bib}\label{fig:reference}
+\end{figure}
+  \item Setelah dicopy, jangan lupa disave.
+  \item Buka kembali pada lembar kerja yang sudah diberi kutipan/gagasan. Lalu tambahkan script setelah kutipan maka akan muncul seperti pada gambar \ref{fig:memilihsumber},
+\lstinputlisting[caption=Penggunaan perintah cite untuk reference, label={Cite}]{src/1/reference.tex}
+  \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/memilihsumber.png}
+  \caption{Ini adalah Proses pemilihan sumber}\label{fig:memilihsumber}
+\end{figure}
+  \item Pilih insert dan save.
+  \item Untuk proses compilenya dilakukan 2 kali yaitu pada main.tex pilih Tex lalu pilih pdflatex dan Bibtex, dilakukan berulang minimal 3 kali compile. Seperti pada gambar \ref{fig:pdflatex} untuk pdflatex dan \ref{fig:bibtexx} untuk BibTex.
+   \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/pdflatex.png}
+  \caption{Ini adalah Compile pdflatex}\label{fig:pdflatex}
+\end{figure}
+   \begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/bibtexx.png}
+  \caption{Ini adalah Compile BibTex}\label{fig:bibtexx}
+\end{figure}
+\end{enumerate}
