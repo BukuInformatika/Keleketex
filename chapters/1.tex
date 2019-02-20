@@ -4,11 +4,9 @@ setcounter.secnumdepth
 setcounter.tocdepth
 
 
-Opsi yang digunakan pada syntax secnumdepth pada perintah verbcounter= seperti perintah diatas, berarti Anda telah merubah kedalaman bab yang Anda perbaharui sampai dengan level 5 yaitu section -- subsection -- subsubsection -- paragraph -- subparagraph. Sedangkan pada perintah dari opsi tocdepth berfungsi untuk membuat table of contents atau menampilkan kedalaman bab sampai dengan level 5, namun jika tidak di setel maka pada bagian level 3 kebawah tidak akan dapat ditampilkan pada bagian toc 
-Berikut dilbawah ini adalah contoh perintah untuk memasukan gambar \ref{labelgambar}.
-
 
 Opsi yang digunakan pada syntax secnumdepth pada perintah verbcounter= seperti perintah diatas, berarti Anda telah merubah kedalaman bab yang Anda perbaharui sampai dengan level 5 yaitu section -- subsection -- subsubsection -- paragraph -- subparagraph. Sedangkan pada perintah dari opsi tocdepth berfungsi untuk membuat table of contents atau menampilkan kedalaman bab sampai dengan level 5, namun jika tidak di setel maka pada bagian level 3 kebawah tidak akan dapat ditampilkan pada bagian toc \ref{labelgambar}.
+
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=1\textwidth]{figures/capture.JPG}}
@@ -31,25 +29,14 @@ Tanda petik di Latex menggunakan petik miring dan petik satu. Petik miring biasa
 \section{Penomoran}
 Perintah penomoran pada latex biasanya menggunakan format \textit{Numbering} atau format \textit{Bullets}. Perintah yang digunakan pada format Numbering adalah \textit{enumerate} sedangkan untuk Bullets yang menyerupai poin menggunakan \textit{itemize}.
 
-\par \textit{Numbering} merupakan perintah yang digunakan untuk membuat daftar berurut dengan penomoran menggunakan angka (numbered list), yang biasanya diberikan pada awal baris baru. Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list). Berikut ini adalah perintah untuk memasukan listing pada penomoran \ref{lst:penomoran}.
 
 
-\textit{Numbering} merupakan perintah yang digunakan untuk membuat daftar berurut dengan penomoran menggunakan angka (numbered list), yang biasanya diberikan pada awal baris baru \ref{lst:PenomoranNumbering}. 
+\textit{Numbering} merupakan perintah yang digunakan untuk membuat daftar berurut dengan penomoran menggunakan angka (numbered list), yang biasanya diberikan pada awal baris baru. Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list). Pada listing \ref{lst:penomoran} adalah perintah untuk memasukan listing pada penomoran .
+
+
 \lstinputlisting[caption=Memberikan Perintah Numbering,label={lst:PenomoranNumbering}]{src/1/lstlistingNumbering.tex}
 Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list) \ref{lst:penomoran}.
 \lstinputlisting[caption=Menambahkan kode perintah bullets,label={lst:penomoran}]{src/1/poin.tex}
-
-
-\section{Karakter Khusus}
-Untuk memberikan karakter khusus pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya seperti pada gambar \ref{KarakterKhusus}
-
-
-\begin{figure}[!htbp]
-	\centerline{\includegraphics[width=0.70\textwidth]{figures/1.JPG}}
-	\caption{Contoh Penggunaan Karakter Khusus}
-	\label{KarakterKhusus}
-\end{figure}
-
 
 \section{Kode Program}
 Agar kita dapat memasukan kode program, kita dapat menggunakan perintah \textit{lstlisting}. Perintah ini  berfungsi untuk memasukkan atau menambahkan kode program apapun ke dalam file yang terpisah. Untuk memasukan perintah \textit{lstlisting} kita perlu menulis parameter \textit{caption} dan \textit{label} untuk memberikan penjelasan keterangan kode program dan sebagai sumber referensi dari label kode program.
@@ -62,11 +49,26 @@ Cara menambahkan gambar seperti pada listing \ref{lst:kodegambar}.
 
 
 \section{Tabel}
-Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya. 
+
+Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya \ref{lst:tabel}
+
+\lstinputlisting[caption=Menambahkan perintah table,label={lst:tabel}]{src/1/tabel.tex}
+
+Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya.
+
 
 \section{Document class}
 
 Pada dokumen Latex terdapat atau mempunyai beberapa struktur yang dicirikan dengan blok yang diberi apit oleh perintah begin dan end. Latex memberikan pilihan Class dokuman yang bisa di pakai, antara lain aadlah Book, Report, Article dan lain sebagainya. Class document book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung table of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
+
+
+Format ukuran font pada latex \ref{labelgambar1}
+
+\begin{figure}[ht]
+\centerline{\includegraphics[width=0.7\textwidth]{figures/1.PNG}}
+\caption{ukuran font}
+\label{labelgambar1}
+\end{figure}
 
 Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awal document, untuk cara penulisan nya dapat dilakukan sebagai berikut:
 \begin{enumerate}
@@ -82,12 +84,9 @@ Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awa
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini, Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang, dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis.
 
-
-
-
-
 \section{Membuat Penomoran Referensi}
-Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterangan referensi/sumber asal suatu kutipan/gagasan seperti pada gambar \ref{fig:contohpenomoranref}.
+Untuk menambahkan referensi atau melakukan sanitasi pada latex kita dapat menggunakan berbagai macam cara. Salah satu cara sederhana yang dapat kita gunakan adalah dengan menggunakan environment yang di sebut \textit{thebibliography}. Namun, kebanyakan orang saat ini menggunakan \textit{BibTeX} untuk melakukan sanitasi sebagai acuan referensi. Dengan menggunakan \textit{BibTex} kita dapat mengatur sitasi sendiri secara terpisah dalam format file \*.bib \cite{atmaja2015tutorial}.
+\par Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterangan referensi atau sumber asal suatu kutipan dan gagasan. Untuk mengetahui bagaimana menambahkan referensi pada latex, kita dapat melihat langkah-langkahnya seperti pada gambar \ref{fig:contohpenomoranref}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=.75\textwidth]{figures/contohpenomoranref.png}
@@ -101,7 +100,7 @@ Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterang
   \includegraphics[width=.75\textwidth]{figures/scholar.png}
   \caption{Ini adalah Halaman Google Scholar}\label{fig:scholar}
 \end{figure}
-  \item Setelah selesai mengutip jangan lupa untuk mengambil script bibtexnya dengan cara klik pada tanda '' seperti pada gambar \ref{fig:awalbibtex},
+  \item Setelah selesai mengutip jangan lupa untuk mengambil script bibtexnya dengan cara klik pada tanda kutip seperti pada gambar \ref{fig:awalbibtex},
   \begin{figure}[!htbp]
   \centering
   \includegraphics[width=.75\textwidth]{figures/awalbibtex.png}
@@ -131,8 +130,8 @@ Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterang
   \caption{Ini adalah Reference.bib}\label{fig:reference}
 \end{figure}
   \item Setelah dicopy, jangan lupa disave.
-  \item Buka kembali pada lembar kerja yang sudah diberi kutipan/gagasan. Lalu tambahkan script setelah kutipan maka akan muncul seperti pada gambar \ref{fig:memilihsumber},
-\lstinputlisting[caption=Penggunaan perintah cite untuk reference, label={Cite}]{src/1/reference.tex}
+  \item Buka kembali pada lembar kerja yang sudah diberi kutipan/gagasan. Lalu tambahkan script listing \ref{lst:capaian}. setelah kutipan maka akan muncul seperti pada gambar \ref{fig:memilihsumber},
+\lstinputlisting[caption=Penggunaan perintah cite untuk reference,label={lst:capaian}]{src/1/reference.tex}
   \begin{figure}[!htbp]
   \centering
   \includegraphics[width=.75\textwidth]{figures/memilihsumber.png}
@@ -153,7 +152,7 @@ Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterang
 \end{enumerate}
 
 \section{Menambahkan Spesial Karakter}
-cara memasukkan karakter spesial menggunakan listing \ref{lst:kodespesial}.
+Untuk menambahkan karakter spesial pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya, cara memasukkan karakter spesial menggunakan listing \ref{lst:kodespesial}
 \lstinputlisting[caption=Contoh kode untuk menambahkan karakter spesial,label={lst:kodespesial}]{src/1/spesial.tex}
 
 
