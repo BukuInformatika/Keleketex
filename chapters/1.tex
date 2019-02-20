@@ -38,18 +38,6 @@ Perintah penomoran pada latex biasanya menggunakan format \textit{Numbering} ata
 Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list) \ref{lst:penomoran}.
 \lstinputlisting[caption=Menambahkan kode perintah bullets,label={lst:penomoran}]{src/1/poin.tex}
 
-
-\section{Karakter Khusus}
-Untuk memberikan karakter khusus pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya seperti pada gambar \ref{KarakterKhusus}
-
-
-\begin{figure}[!htbp]
-	\centerline{\includegraphics[width=0.70\textwidth]{figures/1.JPG}}
-	\caption{Contoh Penggunaan Karakter Khusus}
-	\label{KarakterKhusus}
-\end{figure}
-
-
 \section{Kode Program}
 Agar kita dapat memasukan kode program, kita dapat menggunakan perintah \textit{lstlisting}. Perintah ini  berfungsi untuk memasukkan atau menambahkan kode program apapun ke dalam file yang terpisah. Untuk memasukan perintah \textit{lstlisting} kita perlu menulis parameter \textit{caption} dan \textit{label} untuk memberikan penjelasan keterangan kode program dan sebagai sumber referensi dari label kode program.
 
@@ -96,11 +84,9 @@ Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awa
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini, Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang, dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis.
 
-
-
-
 \section{Membuat Penomoran Referensi}
-Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterangan referensi/sumber asal suatu kutipan/gagasan seperti pada gambar \ref{fig:contohpenomoranref}.
+Untuk menambahkan referensi atau melakukan sanitasi pada latex kita dapat menggunakan berbagai macam cara. Salah satu cara sederhana yang dapat kita gunakan adalah dengan menggunakan environment yang di sebut \textit{thebibliography}. Namun, kebanyakan orang saat ini menggunakan \textit{BibTeX} untuk melakukan sanitasi sebagai acuan referensi. Dengan menggunakan \textit{BibTex} kita dapat mengatur sitasi sendiri secara terpisah dalam format file \*.bib \cite{atmaja2015tutorial}.
+\par Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterangan referensi atau sumber asal suatu kutipan dan gagasan. Untuk mengetahui bagaimana menambahkan referensi pada latex, kita dapat melihat langkah-langkahnya seperti pada gambar \ref{fig:contohpenomoranref}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=.75\textwidth]{figures/contohpenomoranref.png}
@@ -166,7 +152,7 @@ Disaat mengutip maupun menggunakan sanitasi diperkenankan untuk memberi keterang
 \end{enumerate}
 
 \section{Menambahkan Spesial Karakter}
-cara memasukkan karakter spesial menggunakan listing \ref{lst:kodespesial}.
+Untuk menambahkan karakter spesial pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya, cara memasukkan karakter spesial menggunakan listing \ref{lst:kodespesial}
 \lstinputlisting[caption=Contoh kode untuk menambahkan karakter spesial,label={lst:kodespesial}]{src/1/spesial.tex}
 
 
