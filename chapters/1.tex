@@ -158,4 +158,26 @@ Untuk menambahkan referensi atau melakukan sanitasi pada latex kita dapat menggu
 Untuk menambahkan karakter spesial pada LaTex kita dapat menggunakan tanda \textit{backslash} didepan karakter yang ingin kita tandai. Terdapat beberapa karakter yang tidak bisa langsung digunakan seperti tanda \textit{ampersand}. Selain itu format pemberian kutipan pada LaTex berbeda dengan pemberian kutipan pada editor lainnya, cara memasukkan karakter spesial menggunakan listing \ref{lst:kodespesial}
 \lstinputlisting[caption=Contoh kode untuk menambahkan karakter spesial,label={lst:kodespesial}]{src/1/spesial.tex}
 
+\section{Menambahkan Chapter}
+Berikut ini merupakan langkah-langkah untuk menambahkan \textit{chapter} baru.
+\begin{enumerate}
+\item Pertama kita buat \textit{chapter} baru pada repositori kita di folder \verb|chapters|, seperti pada gambar \ref{fig:tambahchapter}.
 
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/tambahchapter.png}
+  \caption{Menambahkan Chapter Baru}\label{fig:tambahchapter}
+\end{figure}
+
+\item Kemudian kita tambahkan kode seperti pada \textit{listing} \ref{lst:input} yang berfungsi untuk memanggil \textit{chapter} yang baru kita tambahkan pada file \verb|main.tex| seperti pada gambar \ref{fig:inputchapter}.
+
+\lstinputlisting[caption=Penggunaan perintah input untuk menambahkan chapter,label={lst:input}]{src/1/input.tex}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=.75\textwidth]{figures/inputchapter.png}
+  \caption{Menambahkan Perintah Input Chapter}\label{fig:inputchapter}
+\end{figure}
+
+\item Terakhir, compile file \verb|main.tex| untuk melihat chapter baru yang telah kita tambahkan pada file main.pdf.
+\end{enumerate}
