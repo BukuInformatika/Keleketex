@@ -1,2 +1,43 @@
 \section{Notifikasi Matematika}
 Sebagai aplikasi editor pengolah dokumen, LATEX memiliki kemampuan yang mampu menghasilkan dokumen berisi notasi-notasi matematis. Agar dapat menghasilkan dokumen yang berisikan notasi-notasi matematis maka kita harus berada dalam \textit{Mathematics Environtment}.
+
+\section{Penulisan Notasi Matematika}
+Pada latex kita dapat menuliskan suatu notasi matematika yang cukup panjang dalam suatu paragraf baru. Penulisan Notasi Matematika dalam suatu paragraf dapat dilihat pada listing \ref{lst:notasi_paragraf}.
+\lstinputlisting[caption=Notasi Matematika Dalam Paragraf,label={lst:notasi_paragraf}]{src/3/notasi1.tex}
+
+\section{Font Dalam Notasi Matematika}
+Ada beberapa perintah pada yang dapat digunakan untuk mengubah jenis font notasi matematis dalam latex. Beberapa perintah tersebut dapat kita lihat pada listing \ref{lst:fontmath}.
+\lstinputlisting[caption=Jenis Font Matematis,label={lst:fontmath}]{src/3/font.tex}
+
+Hasil output : 
+
+$\mathrm{x y z}$
+
+$\mathsf{x y z}$
+
+$\mathtt{x y z}$
+
+$\mathit{x y z}$
+
+$\mathbf{x y z}$
+
+\section{Perumusan Menggunakan Supersripts dan Subscripts}
+Penulisan \textit{Supserscripts} dan \textit{Subscripts} biasanya digunakan untuk membuat sebuah rumus dengan menghasilkan pangkat diatas dan pangkat dibawah pada suatu rumus. Cara penulisan penggunaan ini adalah dengan menggunakan perintah \textbf{sp} dan perintah \textbf{sb}. Untuk contoh penerapan perintah \textit{Supserscripts} dan \textit{Subscripts} dapat kita lihat pada listing \ref{lst:sp1}.
+
+\lstinputlisting[caption=Penggunaan Supersripts dan Subscripts,label={lst:sp1}]{src/3/sp1.tex}
+
+Hasil output :
+
+\begin{displaymath}
+y = x\sb{1}\sp{2} + x\sb{2}\sp{2}
+\end{displaymath}
+
+Atau kita juga dapat menggunakan perintah lain seperti pada listing \ref{lst:sp2}.
+
+\lstinputlisting[caption=Perintah Pada Superscripts dan Subscripts,label={lst:sp2}]{src/3/sp2.tex}
+
+Hasil output :
+
+\begin{displaymath}
+f(x) = e^{x_1}
+\end{displaymath}
