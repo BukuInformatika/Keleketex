@@ -1,3 +1,25 @@
 \section{Alignment}
 Alignment adalah perataan baris pada LateX. terdapat 3 jenis pada perataan tersebut yaitu rata kiri,rata kanan atau rata tengah. pada dokumen LateX memiliki perataan yang secara default sudah diatur dan memiliki perataan justified atau biasa disebut rata kanan.
 
+\section{Membuat Tabel}
+Latex memiliki banyak keunggulan dalam membuat dokumen selain membuat format penulisan dokumen menjadi akurat dan tertata dengan rapi, latex juga mempermudah pengguna dalam penulisan dokumen yakni tidak perlu memperhatikan penulisan karena latex secara otomatis dapat memperbaharuinya. salah satu keunggulan latex yaitu dapat membuat tabel yakni seperti ini
+
+\begin{table}[h]
+\caption{LateX Table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Bagian I}&\textbf{Bagian II}\\
+\hline
+Cover&judul\\
+\hline
+Kata pengantar&abstrak\\
+\hline
+daftar isi&si\\
+\hline
+kesimpulan&penutup\\
+\hline
+\end{tabular}
+\label{table:permisalan}
+\end{table}
+
