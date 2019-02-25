@@ -57,33 +57,19 @@ Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain
 
 Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya.
 
-Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya \cite{kartikamodul}. 
+Untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya \cite{kartikamodul}.
 
 
 
 \section{Document class}
 
-Pada dokumen Latex terdapat atau mempunyai beberapa struktur yang dicirikan dengan blok yang diberi apit oleh perintah begin dan end. Latex memberikan pilihan Class dokuman yang bisa di pakai, antara lain aadlah Book, Report, Article dan lain sebagainya. Class document book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung table of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
+Pada dokumen Latex terdapat atau mempunyai beberapa struktur yang dicirikan dengan blok yang diberi apit oleh perintah begin dan end. Latex memberikan pilihan Class dokuman yang bisa di pakai, antara lain aadlah Book, Report, Article dan lain sebagainya. Class document book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung table of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung. 
 
+\section{Format Font}
+Terdapat beberapa jenis format font pada Latex yang dapat kita gunakan,
+berikut ini adalah jenis jenis format font pada latex \ref{lst:ukuranfont}
 
-Format ukuran font pada latex \ref{labelgambar1}
-
-\begin{figure}[ht]
-\centerline{\includegraphics[width=0.7\textwidth]{figures/1.PNG}}
-\caption{ukuran font}
-\label{labelgambar1}
-\end{figure}
-
-Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awal document, untuk cara penulisan nya dapat dilakukan sebagai berikut:
-\begin{enumerate}
-  \item \textit{backslash} document class kurung kurawal a4papper, ukuran yang di inginkan tutup kurawal lalu report
-  \item \textit{backslash} begin buka kurawal document tutup kurawal
-  \item \textit{backslash} begin buka kurawal judul document tutup kurawal
-  \item \textit{backslash} autor buka kurawal nama penulis tutup kurawal
-  \item \textit{backslash} date buka kurawal tanggal pembuatan tutup kurawal
-  \item \textit{backslash} maketitle
-  \item \textit{backslash} and buka kurawal document tutup kurawal
-\end{enumerate}
+\lstinputlisting[caption=contoh ukuran font,label={lst:ukuranfont}]{src/1/ukuranfont.tex}
 
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini, Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang, dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis.
