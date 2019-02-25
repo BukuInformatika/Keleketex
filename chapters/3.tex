@@ -1,4 +1,4 @@
-\section{Notifikasi Matematika}
+\section{Membuat Rumus dengan LaTex}
 Sebagai aplikasi editor pengolah dokumen, LATEX memiliki kemampuan yang mampu menghasilkan dokumen berisi notasi-notasi matematis. Agar dapat menghasilkan dokumen yang berisikan notasi-notasi matematis maka kita harus berada dalam \textit{Mathematics Environtment}.
 
 \section{Penulisan Notasi Matematika}
@@ -21,7 +21,37 @@ $\mathit{x y z}$
 
 $\mathbf{x y z}$
 
-\section{Perumusan Menggunakan Supersripts dan Subscripts}
+\section{Rumus Dasar}
+Rumus dasar ini terdiri dari 3 notasi yaitu penjumlahan, pengurangan, dan perkalian. Contoh kode untuk rumus dasar bisa dilihat pada listing \ref{lst:rumus_dasar}.
+\lstinputlisting[caption=Penggunaan Rumus Dasar,label={lst:rumus_dasar}]{src/1/rumus_dasar.tex}
+Hasil output:
+
+$$ a+b$$
+
+$$ a-b$$
+
+$$ a \times b$$
+
+\subsection{Rumus Pecahan}
+Rumus pecahan yang dimaksud adalah notasi per pada pembagian. Contoh kode untuk rumus pecahan bisa dilihat pada listing \ref{lst:rumus_pecahan}.
+\lstinputlisting[caption=Penggunaan Rumus Pecahan,label={lst:rumus_pecahan}]{src/1/rumus_pecahan.tex}
+Hasil output:
+
+$$ a/b$$
+
+$$ \frac {a}{b}$$
+
+\subsection{Rumus Akar}
+Rumus akar dapat dilihat pada listing \ref{lst:rumus_akar}.
+\ref{lst:rumus_akar}.
+\lstinputlisting[caption=Penggunaan Rumus Akar,label={lst:rumus_akar}]{src/1/rumus_akar.tex}
+Hasil output:
+
+$$ \sqrt[a]{b}$$
+
+$$ \sqrt{\sqrt{a}}$$
+
+\section{Perumusan Menggunakan Superscripts dan Subscripts}
 Penulisan \textit{Supserscripts} dan \textit{Subscripts} biasanya digunakan untuk membuat sebuah rumus dengan menghasilkan pangkat diatas dan pangkat dibawah pada suatu rumus. Cara penulisan penggunaan ini adalah dengan menggunakan perintah \textbf{sp} dan perintah \textbf{sb}. Untuk contoh penerapan perintah \textit{Supserscripts} dan \textit{Subscripts} dapat kita lihat pada listing \ref{lst:sp1}.
 
 \lstinputlisting[caption=Penggunaan Supersripts dan Subscripts,label={lst:sp1}]{src/3/sp1.tex}
@@ -41,3 +71,27 @@ Hasil output :
 \begin{displaymath}
 f(x) = e^{x_1}
 \end{displaymath}
+
+\section {Perumusan Array dan Matriks}
+Dalam LaTex, kita dapat menuliskan rumus sebuah array pada environment \textbf{tabular}. Perintah untuk membuat array dan matriks dapat kita lihat pada listing \ref{lst:array}.
+\lstinputlisting[caption=Penulisan Array atau Matriks,label={lst:array}]{src/3/array.tex}
+
+Hasil output :
+
+\begin{displaymath}
+\left (
+\begin{array}{rrr}
+0 & 55 & 23 \\
+34 & -83 & 68 \end{array}
+\right )
+\end{displaymath}
+
+Ada beberapa hal yang perlu kita ketahui dalam penulisan rumus array atau matriks ini :
+\begin{itemize}
+\item Penulisan array memiliki kesamaan seperti saat membuat format tabel
+\item Perintah \textbf{"rrr"} berfungsi untuk menentukan posisi dari masing-masing komponen matriks tersebut
+\item Tanda kurung kurawal "( )" berfungsi untuk mendefinisikan bagian kurung buka dan kurung tutup pada sebuah matriks  
+\end{itemize}
+
+
+
