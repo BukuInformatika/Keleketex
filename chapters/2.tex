@@ -1,8 +1,21 @@
-\section{Mengatasi Error Latex}
-Pastikan package ini sudah ada diawal code main.tex, jika belum, maka tambahkanlah:
-
-
-Lalu tambahkanlah code ini untuk memasukkan gambar
-
-
-Scaling berfungsi untuk mengatur size gambar sesuai dengan keinginan anda, 1.0 artinya original size, diatas itu untuk memperbesar, dibawah itu untuk memperkecil. Nama file nya tidak memerlukan ekstensi, tetapi nama file nya jangan memakai spasi, karena tidak sesuai dengan standar pengkodean. 
+\section{Gambar}
+Untuk dapat menambahkan gambar pada latex biasanya hal yang harus dilakukan adalah mendeklarasikan penggunaan paket graphicx pada bagian preamble agar latex dapat menempatkan gambar sesuai dengan yang kita inginkan di dalam sebuah dokumen. Cara menambahkan gambar dapat dilihat seperti pada listing \ref{lst:kodegambar}.
+\lstinputlisting[caption=Contoh kode untuk menambahkan gambar,label={lst:kodegambar}]{src/1/figure.tex}
+Beberapa hal yang harus kita perhatikan dari format perintah penambahan gambar :
+\begin{enumerate}
+\item File gambar yang ingin kita masukkan kedalam dokumen harus diletakkan pada direktori yang sama dengan direktori file dokumen ( .tex) yang telah kita buat.
+\item Panjang dan Lebar suatu gambar dapat diubah sesuai dengan yang kita inginkan. Perintah \textit{width} berfungsi untuk mengatur lebar gambar, sedangkan perintah \textit{height} berfungsi untuk mengatur tinggi gambar tersebut.
+\item Dengan mengatur \textbf{width} dan \textbf{height} kita dapat memasukkan gambar meskipun gambar tersebut memiliki ukuran dimensi yang besar.
+\item Format gambar standar latex adalah \textbf{ .eps} (\textit{Encapsulated PostScript}) namun kita juga dapat menggunakan format \textbf{ .jpg}.
+\end{enumerate}
+\subsection{Posisi Gambar}
+Pengaturan posisi gambar dapat kita tentukan melalui 2 hal : 
+\begin{itemize}
+\item Perataan tepian dokumen : Dari contoh yang sudah kita lihat pada listing kita bisa menambahkan perintah tertentu untuk mengubah posisi dari suatu gambar, misalkan kita menambahkan perintah \textit{center} maka posisi gambar akan berubah ketengah sesuai dengan perintah yang diberikan.
+\item Huruf-huruf seperti \textbf{[htbp]} yang terdapat pada perintah diatas juga memiliki fungsi untuk mengatur gambar pada suatu halaman.
+\subitem \textbf{h} : berfungsi untuk meletakkan gambar persis ditempat perintah tersebut dituliskan didalam dokumen.
+\subitem \textbf{t} : berfungsi untuk meletakkan gambar dibagian atas halaman.
+\subitem \textbf{b} : berfungsi untuk meletakkan gambar dibagian bawah halaman.
+\subitem \textbf{p} : berfungsi untuk meletakkan gambar pada sebuah halaman khusus yang memuat hanya gambar itu saja.
+\item Saat kita menggunakan \textbf{h}, latex akan secara otomatis menempatkan gambar dihalaman baru jika tidak ada cukup ruang untuk memuat gambar tersebut dengan perintah yang telah dituliskan pada gambar.
+\end{itemize}
