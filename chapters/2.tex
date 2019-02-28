@@ -19,3 +19,31 @@ Pengaturan posisi gambar dapat kita tentukan melalui 2 hal :
 \subitem \textbf{p} : berfungsi untuk meletakkan gambar pada sebuah halaman khusus yang memuat hanya gambar itu saja.
 \item Saat kita menggunakan \textbf{h}, latex akan secara otomatis menempatkan gambar dihalaman baru jika tidak ada cukup ruang untuk memuat gambar tersebut dengan perintah yang telah dituliskan pada gambar.
 \end{itemize}
+
+\section{Membuat Tabel}
+Latex memiliki banyak keunggulan dalam membuat dokumen selain membuat format penulisan dokumen menjadi akurat dan tertata dengan rapi, latex juga mempermudah pengguna dalam penulisan dokumen yakni tidak perlu memperhatikan penulisan karena latex secara otomatis dapat memperbaharuinya.
+
+Salah satu keunggulan latex yang lainnya yaitu dapat membuat tabel, untuk dapat membuat tabel kita harus menggunakan perintah \textit{table}. Selain itu kita juga perlu menambahkan referensi pada tabel yang terdapat dalam kalimat berdasarkan labelnya. Contoh perintah pembuatan tabel dapat kita lihat seperti pada listing \ref{lst:tabelcontoh}.
+
+\lstinputlisting[caption=Contoh Perintah Membuat Tabel,label={lst:tabel}]{src/2/tabelcontoh.tex}
+
+Hasil output :
+
+\begin{table}[h]
+\caption{Latex Table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Bagian I}&\textbf{Bagian II}\\
+\hline
+Cover&judul\\
+\hline
+Kata pengantar&abstrak\\
+\hline
+daftar isi&si\\
+\hline
+kesimpulan&penutup\\
+\hline
+\end{tabular}
+\label{table:permisalan}
+\end{table}
