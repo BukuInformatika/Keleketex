@@ -1,5 +1,5 @@
 \section{Membuat Rumus dengan LaTex}
-Sebagai aplikasi editor pengolah dokumen, LATEX memiliki kemampuan yang mampu menghasilkan dokumen berisi notasi-notasi matematis. Agar dapat menghasilkan dokumen yang berisikan notasi-notasi matematis maka kita harus berada dalam \textit{Mathematics Environtment}.
+Sebagai aplikasi editor pengolah dokumen, LATEX memiliki kemampuan yang mampu menghasilkan dokumen berisi notasi-notasi matematis. Agar dapat menghasilkan dokumen yang berisikan notasi-notasi matematis maka kita harus berada dalam \textit{Mathematics Environtment}. Terdapat beberapa perintah yang bisa digunakan dalam membuat rumus pada latex. Kita dapat menggunakan perintah \textit{equation}, \textit{displaymath} ataupun menggunakan \$. Kita juga dapat menyelipkan rumus didalam suatu kalimat di sebuah paragraf dengan menggunakan perintah \$\$.
 
 \section{Penulisan Notasi Matematika}
 Pada latex kita dapat menuliskan suatu notasi matematika yang cukup panjang dalam suatu paragraf baru. Penulisan Notasi Matematika dalam suatu paragraf dapat dilihat pada listing \ref{lst:notasi_paragraf}.
@@ -101,6 +101,29 @@ Contoh kita akan mengubah variabel \textit{x} kedalam satuan vektor. Maka hasil 
 \begin{displaymath}
 \vec{x} = a + b
 \end{displaymath} 
+
+\section{Kombinasi Penggunaan Rumus}
+Pada section ini kita akan mempelajari bagaimana mengkombinasikan sebuah rumus dari penulisan dasar rumus Subscript, Superscript, Akar Pangkat, Pecahan dan sejenisnya. Contoh pertama dapat kita lihat pada listing \ref{lst:sigma}.
+\lstinputlisting[caption=Contoh Kombinasi Rumus Sigma,label={lst:sigma}]{src/3/sigma.tex}
+
+Hasil output :
+
+$$\sum^{\infty}_{n=1} \frac{1}{n}$$
+
+Setelah melihat salah satu penggunaan kombinasi rumus diatas kita bisa melakukan kombinasi rumus lainnya. Seperti yang akan diperlihatkan pada listing \ref{lst:kombinasi}
+
+\lstinputlisting[caption=Contoh Kombinasi Rumus,label={lst:kombinasi}]{src/3/kombinasi.tex}
+
+Hasil output :
+\begin{enumerate}
+\item $\sqrt{ \frac{a^2}{3b^3+1}}$
+\item $\lim_{n \to \infty} \frac{1}{n}=0$
+\item $\int^b_a x^2 \, dx$
+\item $\lim \limits_{n \to \infty} \frac{1}{n}=0$
+\item $\int \limits^b_a x^2 \, dx$
+\item $\sum \limits^{\infty}_{n=1} \frac{1}{n}$
+\end{enumerate}
+
 
 
 
