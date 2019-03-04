@@ -62,3 +62,17 @@ Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awa
 
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini, Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang, dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis. Pada Pengaturan huruf lateks dibuat dengan menggunakan tag atau perintah khusus yang menyediakan beberapa cara untuk memformat dokumen Anda. Kadang-kadang perintah standar tidak cukup untuk memenuhi beberapa kebutuhan spesifik.
+
+\section{Penomoran}
+Perintah penomoran pada latex biasanya menggunakan format \textit{Numbering} atau format \textit{Bullets}. Perintah yang digunakan pada format Numbering adalah \textit{enumerate} sedangkan untuk Bullets yang menyerupai poin menggunakan \textit{itemize}.
+
+
+
+\textit{Numbering} merupakan perintah yang digunakan untuk membuat daftar berurut dengan penomoran menggunakan angka (numbered list), yang biasanya diberikan pada awal baris baru. Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list). Pada listing \ref{lst:penomoran} adalah perintah untuk memasukan listing pada penomoran .
+
+
+\lstinputlisting[caption=Memberikan Perintah Numbering,label={lst:PenomoranNumbering}]{src/1/lstlistingNumbering.tex}
+Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list) \ref{lst:penomoran}.
+\lstinputlisting[caption=Menambahkan kode perintah bullets,label={lst:penomoran}]{src/1/poin.tex}
+
+
