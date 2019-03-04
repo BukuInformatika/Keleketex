@@ -5,7 +5,7 @@ Sebagai aplikasi editor pengolah dokumen, LATEX memiliki kemampuan yang mampu me
 Pada latex kita dapat menuliskan suatu notasi matematika yang cukup panjang dalam suatu paragraf baru. Penulisan Notasi Matematika dalam suatu paragraf dapat dilihat pada listing \ref{lst:notasi_paragraf}.
 \lstinputlisting[caption=Notasi Matematika Dalam Paragraf,label={lst:notasi_paragraf}]{src/3/notasi1.tex}
 
-\section{Font Dalam Notasi Matematika}
+\section{Jenis Font Dalam Notasi Matematika}
 Ada beberapa perintah pada yang dapat digunakan untuk mengubah jenis font notasi matematis dalam latex. Beberapa perintah tersebut dapat kita lihat pada listing \ref{lst:fontmath}.
 \lstinputlisting[caption=Jenis Font Matematis,label={lst:fontmath}]{src/3/font.tex}
 
@@ -123,6 +123,20 @@ Hasil output :
 \item $\int \limits^b_a x^2 \, dx$
 \item $\sum \limits^{\infty}_{n=1} \frac{1}{n}$
 \end{enumerate}
+
+\section{Penulisan Tata Letak Rumus}
+Pada section ini kita kan mempelajari bagaimana menempatkan penulisan rumus sesuai dengan tata letak yang kita inginkan. Misalkan kita ingin membuat suatu rumus dan hasil dari rumus tersebut ingin kita letakkan di tengah, kiri atau pun kanan. Contoh penerapan tata letak dalam sebuah rumus dapat kita lihat pada listing \ref{lst:tataletak}.
+\lstinputlisting[caption=Contoh Penulisan Tata Letak Dalam Rumus,label={lst:tataletak}]{src/3/tataletak.tex}
+
+Hasil output :
+\begin{enumerate}
+\item $\begin{array}{ccc} (x+y)(x-y) & = & x^2-xy + yx-y^2 \\ & = & x^2-y^2 \\ (x+y)^2 & = & x^2 + 2xy + y^2 \end{array}$
+
+\item $\begin{array}{lcr} (x+y)(x-y) & = & x^2-xy + yx-y^2 \\ & = & x^2-y^2 \\ (x+y)^2 & = & x^2 + 2xy + y^2 \end{array}$
+
+\item $\begin{array}{rcl} (x+y)(x-y) & = & x^2-xy + yx-y^2 \\ & = & x^2-y^2 \\ (x+y)^2 & = & x^2 + 2xy + y^2 \end{array}$
+\end{enumerate}
+
 
 
 
