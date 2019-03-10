@@ -75,8 +75,52 @@ Perintah penomoran pada latex biasanya menggunakan format \textit{Numbering} ata
 Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list) \ref{lst:penomoran}.
 \lstinputlisting[caption=Menambahkan kode perintah bullets,label={lst:penomoran}]{src/1/poin.tex}
 
-\section{Bahasa}
-LateX punya kemampuan untuk dapat mengatur tulisan aturan ejaan yang dimiliki oleh beberapa bahasa tertentu.
-Hal tersebut dapat diatur dengan menggunakan \textit{babel package} yang dimilki LateX tersebut dapat berpengaruh pada pemenggalan kata,spasi pada setiap kata, dan beberapa dokumen yang menggunakan heading.
-contoh perintah yang mengatur LateX untuk menggunakan babel bahasa indonesia :
-\lstinputlisting[caption=Perintah babel text,label={lst:bahasa}]{src/2/babel.tex}
+\section {Tabel}
+Ada beberapa hal yang perlu dalam membuat tabel, sebelumnya kita telat  mengetahui tentang bagaimana menambahkan tabel pada suatu dokumen. namun disini kita perlu mengetahui tentang bagaimana membuat tabel itu terlihat rapi seperti yang kita harapkan misalnya tabel tanpa garis tepi  berikut perintahnya sebagai berikut :
+\lstinputlisting[caption=Memberikan Perintah Tabel,label={lst:Latihan tabel}]{src/1/tabel2.tex}
+
+Dan maka hasil dari outputnya akan seperti dibawah ini :
+
+\begin{table}[h]
+\caption{Latex Table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Bagian I}&\textbf{Bagian II}\\
+\hline
+Cover&judul\\
+\hline
+Kata pengantar&abstrak\\
+\hline
+daftar isi&si\\
+\hline
+kesimpulan&penutup\\
+\hline
+\end{tabular}
+\label{table:permisalan}
+\end{table}
+
+Tapi bagaimana dengan tabel tanpa garis tepi, berikut perintah yang akan dimasukan.
+\lstinputlisting[caption=Memberikan Perintah Tabel,label={lst:Latihan tabel}]{src/1/tabel3.tex}
+ makan hasil outputnya adalah 
+
+\begin{table}[h]
+\caption{Latex Table}
+\centering
+\begin{tabular}{c|c}
+\hline
+\textbf{Bagian I}&\textbf{Bagian II}\\
+\hline
+Cover&judul\\
+\hline
+Kata pengantar&abstrak\\
+\hline
+daftar isi&si\\
+\hline
+kesimpulan&penutup\\
+\hline
+\end{tabular}
+\label{table:permisalan}
+\end{table}
+
+Bisa kita lihat bawah garis tepi pada sisi kiri dan kanan pada tabel tidak ada karena perintah yang dimasukan adalah perintah membuat tabel tanpa garis tepi. perintah yang dimasukan yaitu |c|c| yaitu perintah untuk mengatur garis tepi pada tabel dan sesuai dengan kolom tabel yang diinginkan.
