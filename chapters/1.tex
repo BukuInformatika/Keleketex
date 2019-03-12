@@ -60,3 +60,21 @@ Berikut ini merupakan langkah-langkah untuk menambahkan \textit{chapter} baru.
 \item Terakhir, compile file \verb|main.tex| untuk melihat chapter baru yang telah kita tambahkan pada file main.pdf.
 \end{enumerate}
 
+\section{Perintah Include dan Input}
+Ketika kita mengerjakan dokumen-dokumen besar menggunakan latex, tentunya kita akan memecah file menjadi beberapa bagian atau chapters agar isi dari dokumen tersebut lebih terorganisir atau terstruktur. Untuk itu latex memiliki 2 perintah untuk membantu kita semua agar dapat melakukan hal ini. Perintah tersebut tidak lain adalah perintah \textbf{include} dan \textbf{input}.
+\subsection{Include} 
+Perintah \textbf{include} bisa kita gunakan pada batang tubuh dokumen dan pada bagian main.tex, untuk menyisipkan isi file yang lain. Perintah include bisa digunakan untuk menyisipkan file chapter pada main.tex, gambar, link dan sebagainya. Pada gambar misalnya, biasanya akan ditambahkan perintah \textit{includegraphics} atau pada main.tex kita hanya perlu menambahkan perintah \textbf{include} pada chapter atau bagian yang ingin kita sisipkan. Hal yang perlu kita ketahui adalah latex akan memulai halaman baru sebelum memproses isi dari \textit{namafile}. Contoh penggunaan perintah \textit{includegraphics} dapat kita lihat pada gambar \ref{fig:inputchapter} dengan kode pemograman yang dilakukan seperti pada listing \ref{lst:graphic}
+
+\lstinputlisting[caption=Penggunaan perintah includegraphics,label={lst:graphic}]{src/1/graphic.tex}
+
+Dan berikut adalah contoh penggunaan perintah \textbf{include} pada main.tex dapat kita lihat dengan listing \ref{lst:include}
+
+\lstinputlisting[caption=Penggunaan perintah include pada main.tex,label={lst:graphic}]{src/1/include.tex}
+
+Dari contoh listing \ref{lst:include} dapat kita ketahui bahwa kode diawali dengan perintah \textit{include} kemudian di ikuti dengan lokasi section dan chapter.
+\subsection{Input}
+Berbeda dengan perintah include, perintah ini tidak menyebabkan pergantian halaman pada saat menyisipkan isi file \textit{nama-file}. Perintah \textbf{input} biasanya digunakan pada main.tex untuk menambahkan bagian-bagian file atau chapter-chapter pada sebuah dokumen dengan format yang sama seperti pada listing \ref{lst:input} 
+
+\lstinputlisting[caption=Penggunaan perintah input untuk menambahkan chapter,label={lst:input}]{src/1/input.tex}
+
+Untuk penerapan atau pengimplementasian perintah input sendiri sudah cukup dijelaskan pada section menambahkan chapter sebelumnya. 
