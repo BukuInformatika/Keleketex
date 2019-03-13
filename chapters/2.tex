@@ -47,3 +47,29 @@ kesimpulan&penutup\\
 \end{tabular}
 \label{table:permisalan}
 \end{table}
+
+Kemudian untuk menyesuaikan tabel sesuai dengan keinginan, kita juga dapat membuat tabel tanpa menggunakan garis tepi. Perintah untuk membuat tabel tanpa garis tepi dapat kita lihat pada listing \ref{garistepi}
+\lstinputlisting[caption=Memberikan Perintah Tabel,label={lst:garistepi}]{src/1/tabel3.tex}
+
+Hasil output :
+
+\begin{table}[h]
+\caption{Latex Table}
+\centering
+\begin{tabular}{c|c}
+\hline
+\textbf{Bagian I}&\textbf{Bagian II}\\
+\hline
+Cover&judul\\
+\hline
+Kata pengantar&abstrak\\
+\hline
+daftar isi&si\\
+\hline
+kesimpulan&penutup\\
+\hline
+\end{tabular}
+\label{table:permisalan}
+\end{table}
+
+Bisa kita lihat bawah garis tepi pada sisi kiri dan kanan pada tabel tidak ada karena perintah yang dimasukan adalah perintah membuat tabel tanpa garis tepi. Perintah yang dimasukan yaitu |c|c| dimana perintah tersebut berfungsi untuk mengatur garis tepi pada tabel dan sesuai dengan kolom tabel yang diinginkan.
