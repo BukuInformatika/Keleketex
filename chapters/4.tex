@@ -40,25 +40,13 @@ atau bisa juga kira masukan perintah yang sama untuk rata kiri.
 
 Pada dokumen Latex terdapat atau mempunyai beberapa struktur yang dicirikan dengan blok yang diberi apit oleh perintah begin dan end. Latex memberikan pilihan Class dokuman yang bisa di pakai, antara lain aadlah Book, Report, Article dan lain sebagainya. Class document book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung table of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
 
+Perintah format ukuran font pada latex dapat kita lihat seperti pada listing \ref{ukuranfont}
 
-Format ukuran font pada latex \ref{labelgambar1}
+\lstinputlisting[caption=Format Ukuran Font,label={lst:ukuranfont}]{src/4/ukuran.tex}
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=0.7\textwidth]{figures/1class.PNG}}
-\caption{ukuran font}
-\label{labelgambar1}
-\end{figure}
+Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awal document, untuk cara penulisan nya dapat dilakukan seperti pada listing  \ref{document} dibawah ini :
 
-Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awal document, untuk cara penulisan nya dapat dilakukan sebagai berikut:
-\begin{enumerate}
-  \item \textit{backslash} document class kurung kurawal a4papper, ukuran yang di inginkan tutup kurawal lalu report
-  \item \textit{backslash} begin buka kurawal document tutup kurawal
-  \item \textit{backslash} begin buka kurawal judul document tutup kurawal
-  \item \textit{backslash} autor buka kurawal nama penulis tutup kurawal
-  \item \textit{backslash} date buka kurawal tanggal pembuatan tutup kurawal
-  \item \textit{backslash} maketitle
-  \item \textit{backslash} and buka kurawal document tutup kurawal
-\end{enumerate}
+\lstinputlisting[caption=Struktur Awal Document Pada Latex,label={lst:document}]{src/4/document.tex}
 
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini, Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang, dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis. Pada Pengaturan huruf lateks dibuat dengan menggunakan tag atau perintah khusus yang menyediakan beberapa cara untuk memformat dokumen Anda. Kadang-kadang perintah standar tidak cukup untuk memenuhi beberapa kebutuhan spesifik.
@@ -74,56 +62,6 @@ Perintah penomoran pada latex biasanya menggunakan format \textit{Numbering} ata
 \lstinputlisting[caption=Memberikan Perintah Numbering,label={lst:PenomoranNumbering}]{src/1/lstlistingNumbering.tex}
 Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list) \ref{lst:penomoran}.
 \lstinputlisting[caption=Menambahkan kode perintah bullets,label={lst:penomoran}]{src/1/poin.tex}
-
-\section {Tabel}
-Ada beberapa hal yang perlu dalam membuat tabel, sebelumnya kita telat  mengetahui tentang bagaimana menambahkan tabel pada suatu dokumen. namun disini kita perlu mengetahui tentang bagaimana membuat tabel itu terlihat rapi seperti yang kita harapkan misalnya tabel tanpa garis tepi  berikut perintahnya sebagai berikut :
-\lstinputlisting[caption=Memberikan Perintah Tabel,label={lst:Latihan tabel}]{src/1/tabel2.tex}
-
-Dan maka hasil dari outputnya akan seperti dibawah ini :
-
-\begin{table}[h]
-\caption{Latex Table}
-\centering
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Bagian I}&\textbf{Bagian II}\\
-\hline
-Cover&judul\\
-\hline
-Kata pengantar&abstrak\\
-\hline
-daftar isi&si\\
-\hline
-kesimpulan&penutup\\
-\hline
-\end{tabular}
-\label{table:permisalan}
-\end{table}
-
-Tapi bagaimana dengan tabel tanpa garis tepi, berikut perintah yang akan dimasukan.
-\lstinputlisting[caption=Memberikan Perintah Tabel,label={lst:Latihan tabel}]{src/1/tabel3.tex}
- makan hasil outputnya adalah 
-
-\begin{table}[h]
-\caption{Latex Table}
-\centering
-\begin{tabular}{c|c}
-\hline
-\textbf{Bagian I}&\textbf{Bagian II}\\
-\hline
-Cover&judul\\
-\hline
-Kata pengantar&abstrak\\
-\hline
-daftar isi&si\\
-\hline
-kesimpulan&penutup\\
-\hline
-\end{tabular}
-\label{table:permisalan}
-\end{table}
-
-Bisa kita lihat bawah garis tepi pada sisi kiri dan kanan pada tabel tidak ada karena perintah yang dimasukan adalah perintah membuat tabel tanpa garis tepi. perintah yang dimasukan yaitu |c|c| yaitu perintah untuk mengatur garis tepi pada tabel dan sesuai dengan kolom tabel yang diinginkan.
 
 \section{Daftar Pustaka}
 Untuk menampilkan daftar pustaka pada akhir sebuah dokumen LateX menggunakan format perintah sebagai berikut :
