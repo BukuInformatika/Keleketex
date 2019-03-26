@@ -40,7 +40,7 @@ atau bisa juga kira masukan perintah yang sama untuk rata kiri.
 
 Pada dokumen Latex terdapat atau mempunyai beberapa struktur yang dicirikan dengan blok yang diberi apit oleh perintah begin dan end. Latex memberikan pilihan Class dokuman yang bisa di pakai, antara lain aadlah Book, Report, Article dan lain sebagainya. Class document book merupakan Class Document yang paling tepat untuk menulis, karena dapat mendukung table of contents yang dapat berfungsi langsung untuk generate daftar isi secara langsung.
 
-Perintah format ukuran font pada latex dapat kita lihat seperti pada listing \ref{ukuranfont}
+Perintah format ukuran font pada latex dapat kita lihat seperti pada listing \ref{lst:ukuranfont}
 
 \lstinputlisting[caption=Format Ukuran Font,label={lst:ukuranfont}]{src/4/ukuran.tex}
 
@@ -51,9 +51,22 @@ Dalam memberikan penulisan judul pada format latex biasanya di letakkan pada awa
 \section{Costum Command}
 Sesuai  dengan  namanya Costum Command, dimana ke unggulan latex ada fitur yang satu ini, Pembuat dokumen ini dapat  membuat macro untuk kebutuhan yang sifatnya spesifik dan berulang-ulang, dimana costum cummad dapat melakukan tanda bintang berjejer sebagai penanda garis. Pada Pengaturan huruf lateks dibuat dengan menggunakan tag atau perintah khusus yang menyediakan beberapa cara untuk memformat dokumen Anda. Kadang-kadang perintah standar tidak cukup untuk memenuhi beberapa kebutuhan spesifik.
 
+\section{Renewcommand}
+Perintah command merupakan perintah dasar dalam pembentukan format sebuah dokumen yang ada pada latex. Lalu apakah fungsi dari perintah \textit{renewcommand}? Bagaimana mengubah perintah \textit{section} pada command dalam suatu class? Atau bagaimana mengubah command latex pada bagian intinya daripada hanya dari command  \textit{section}-nya saja?
+
+Perintah \textit{section} tidak terdefinisi pada latex kernel namun dia terdefinisi oleh class file yang saling berhunungan. Contoh pengimplementasiannya dapat kita lihat pada dokumentasi listing \ref{lst:renew} :
+
+\lstinputlisting[caption=Perintah Section pada New Command,label={lst:renew}]{src/4/renew.tex}
+
+Perintah \textit{section} diatas menampilkan heading pada dokumen yang dibuat. Pada keterangan \textbf{Format Yang Ditandai} seperti pada listing diatas, dapat di artikan bahwa format heading memiliki space bernilai positive didalamnya, kita bisa mengubah format tersebut menjadi negative dengan perintah \textit{renewcommand} seperti pada listing \ref{lst:renew1} 
+
+\lstinputlisting[caption=Perintah Renewcommand,label={lst:renew1}]{src/4/renew1.tex}
+
+Preamble diatas memberikan efek yang berbeda pada dokumen. Package \textit{titlesec} memberikan hasil yang lebih deklaratif untuk membuat perubahan yang sama, namun ia tetap harus mengasumsikan definisi asli kurang lebih seperti pada class dalam dokumen yang dibuat. Jadi pada dasarnya, perintah \textit{renewcommand} dapat mengubah format suatu dokumen berdasarkan class file dari format \textit{command} yang sudah ditentukan sebelumnya.   
+
+
 \section{Penomoran}
 Perintah penomoran pada latex biasanya menggunakan format \textit{Numbering} atau format \textit{Bullets}. Perintah yang digunakan pada format Numbering adalah \textit{enumerate} sedangkan untuk Bullets yang menyerupai poin menggunakan \textit{itemize}.
-
 
 
 \textit{Numbering} merupakan perintah yang digunakan untuk membuat daftar berurut dengan penomoran menggunakan angka (numbered list), yang biasanya diberikan pada awal baris baru. Sedangkan \textit{Bullets} atau poin adalah perintah yang digunakan untuk membuat daftar berurut dengan penomoran berupa symbol atau poin (bulleted list). Pada listing \ref{lst:penomoran} adalah perintah untuk memasukan listing pada penomoran .
